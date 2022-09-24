@@ -1,0 +1,54 @@
+header {
+  position: absolute;
+  width: 70vw;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  nav {
+    margin-top: 10px;
+
+    ul {
+      display: flex;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.9px;
+
+      li {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  p {
+    width: 100%;
+    color: $color-bright;
+    margin: 0;
+    font-size: 16px;
+    height: 30px;
+    margin-top: 23px;
+    text-align: right;
+    padding-right: 79px;
+
+    &::after {
+      content: "";
+      width: calc(100% - 79px);
+      border-bottom: 1px solid $color-grey;
+      position: absolute;
+      top: 60%;
+      left: 0;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
