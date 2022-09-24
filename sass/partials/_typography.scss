@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap");
+
+h2 {
+  font-size: clamp(1.5rem, calc(2vw + 0.75rem), 2.25rem);
+  line-height: 40px;
+  font-weight: 700;
+  color: $color-dark;
+  text-transform: uppercase;
+  margin: 14px 0;
+}
