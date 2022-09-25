@@ -1,0 +1,104 @@
+#form {
+  margin-top: 8.4375vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .box {
+    max-width: 992px;
+    height: 1179px;
+    position: relative;
+    padding: 90px;
+    margin: 0 20vw;
+
+    img {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .element-1 {
+      top: 22%;
+      right: 73%;
+    }
+
+    .element-2 {
+      top: 35%;
+      left: 64%;
+    }
+
+    .element-3 {
+      top: 65%;
+      right: 14%;
+    }
+
+    .element-4 {
+      top: 41%;
+      right: 82%;
+    }
+
+    .image-1 {
+      top: 52%;
+      right: 57%;
+    }
+
+    .image-2 {
+      top: 22%;
+      left: 64%;
+    }
+
+    .form-wrapper {
+      background-color: $color-bright;
+      padding: 90px;
+      box-shadow: 3px 3px 60px #00000012;
+
+      p {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 32px;
+        color: $color-semi-dark;
+        margin: 15px 0 9.375vh 0;
+      }
+
+      form {
+        margin-top: 30px;
+
+        label {
+          color: $color-semi-dark;
+          font-size: 20px;
+          line-height: 27px;
+          display: inline-flex;
+          align-items: center;
+          margin: 0 30px 30px 0;
+
+          input {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+          }
+        }
+
+        input {
+          width: 506px;
+          height: 52px;
+          margin-bottom: 30px;
+          border: 1px solid $color-grey-op-25;
+          padding-left: 22px;
+        }
+
+        button {
+          margin-top: 30px;
+          width: 38.5%;
+          height: 63px;
+          background-color: $color-bmw-blue;
+          color: $color-bright;
+          font-size: 18px;
+          letter-spacing: 0.9px;
+          line-height: 33px;
+          font-family: $font-first;
+          font-weight: 600;
+          border: none;
+        }
+      }
+    }
+  }
+}

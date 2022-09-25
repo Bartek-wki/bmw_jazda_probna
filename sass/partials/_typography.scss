@@ -14,3 +14,12 @@ h2 {
     text-transform: lowercase;
   }
 }
+
+h3 {
+  font-family: $font-first;
+  color: $color-dark;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 0;
+}
