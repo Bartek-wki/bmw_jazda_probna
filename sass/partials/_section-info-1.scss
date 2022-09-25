@@ -3,24 +3,17 @@
   margin-top: 18.75vh;
 
   .img-1-wrapper {
-    margin-left: 4.15vw;
-    margin-right: 16px;
-    margin-top: 31.875vh;
+    margin: 31.875vh 16px 0 4.15vw;
   }
 
   img {
     max-width: 100%;
+    height: auto;
   }
 
   .facts-wrapper {
     margin-left: 8vw;
     max-width: 660px;
-
-    h2 {
-      span {
-        text-transform: lowercase;
-      }
-    }
 
     .article-wrapper {
       display: flex;
@@ -36,6 +29,8 @@
         .fact-id {
           font-size: 12px;
           font-weight: 700;
+          font-family: $font-first;
+          color: $color-black;
           line-height: 23px;
           margin: 0;
           padding-bottom: 6px;
@@ -49,7 +44,7 @@
             position: absolute;
             bottom: -1px;
             left: 0;
-            border-bottom: 1px solid $color-grey;
+            border-bottom: 1px solid $color-semi-dark;
           }
         }
       }

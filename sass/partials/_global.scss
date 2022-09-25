@@ -14,9 +14,10 @@ body {
 
 body {
   font-size: calc(15px + 0.390625vw);
-  font-family: "Cairo", sans-serif;
+  font-family: $font-second;
   letter-spacing: 0px;
   font-size: 14px;
+  color: $color-dark;
 }
 
 ul {

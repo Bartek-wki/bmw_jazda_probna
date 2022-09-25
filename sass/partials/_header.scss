@@ -39,7 +39,7 @@ header {
     &::after {
       content: "";
       width: calc(100% - 79px);
-      border-bottom: 1px solid $color-grey;
+      border-bottom: 1px solid $color-semi-dark;
       position: absolute;
       top: 60%;
       left: 0;
