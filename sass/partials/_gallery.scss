@@ -1,0 +1,26 @@
+#gallery {
+  display: flex;
+  line-height: 0;
+  margin-top: 19.6875vh;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .left-wrapper {
+    margin: 0 0 0 5px;
+  }
+
+  .right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .row {
+      display: flex;
+    }
+  }
+}
