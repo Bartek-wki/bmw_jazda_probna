@@ -18,7 +18,7 @@
 
     label {
       display: inline-block;
-      width: 60px;
+      width: calc(35.385px + 1.3vw);
       height: 5px;
       background-color: $color-bright;
       margin: 80vh 15px 0 0;
@@ -85,11 +85,11 @@
   }
 
   a {
-    font-size: 18px;
+    font-size: clamp(0.875rem, calc(0.5vw + 0.75rem), 1.125rem);
     font-weight: 600;
     letter-spacing: 0.9px;
-    height: 63px;
-    width: calc(269px + 5.365vw);
+    height: calc(7.1vh - 5px);
+    width: calc(245px + 6.6vw);
     background-color: $color-bmw-blue;
     position: absolute;
     left: 0;
@@ -105,18 +105,16 @@
   .intro-title {
     text-transform: uppercase;
     position: absolute;
-    left: 14.5vw;
+    left: calc(15.8vw - 25px);
     top: 35vh;
 
     p span {
       text-transform: lowercase;
     }
     img {
-      max-width: 100%;
-      height: auto;
+      height: calc(6.7vh - 16px);
     }
     p:nth-child(2) {
-      font-size: 64px;
       font-weight: 700;
       color: $color-bright;
       font-size: clamp(3rem, calc(4vw + 1rem), 4rem);
@@ -129,6 +127,60 @@
       color: $color-bright;
       line-height: 1.25;
       margin: 0.3125em 0;
+    }
+  }
+}
+
+@media (max-width: 360px) {
+  #intro {
+    .slider-container {
+      .slider1 {
+        background-image: url("../images/slider1_small.png");
+      }
+
+      .slider2 {
+        background-image: url("../images/slider1_small.png");
+      }
+
+      .slider3 {
+        background-image: url("../images/slider1_small.png");
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #intro {
+    .intro-title {
+      max-width: 165px;
+
+      p:nth-child(2) {
+        line-height: 56px;
+      }
+
+      p:nth-child(3) {
+        font-family: $font-third;
+        font-weight: 300;
+        line-height: 24px;
+        color: $color-intro-subtitle;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #intro {
+    .slider-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      label {
+        margin-bottom: 30px;
+        &:nth-child(2) {
+          margin-left: 0;
+        }
+      }
     }
   }
 }
