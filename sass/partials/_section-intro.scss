@@ -100,13 +100,18 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    z-index: 300;
   }
 
   .intro-title {
     text-transform: uppercase;
     position: absolute;
-    left: calc(15.8vw - 25px);
     top: 35vh;
+    width: 90%;
+    max-width: 1364px;
+    margin: auto;
+    left: 0;
+    right: 0;
 
     p span {
       text-transform: lowercase;

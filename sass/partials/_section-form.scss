@@ -73,7 +73,7 @@
           input {
             width: 22px;
             height: 22px;
-            margin-right: 10px;
+            margin: 0 10px 0 0;
           }
         }
 
@@ -107,8 +107,9 @@
   #form {
     margin-top: 46.8vh;
     margin-bottom: 53vh;
+
     .box {
-      height: 635px;
+      height: 100%;
       padding: 0;
       margin: 0;
       width: 90%;
@@ -119,19 +120,18 @@
       }
 
       .image-1 {
-        height: 265px;
-        top: auto;
-        bottom: 0;
+        height: 48vh;
+        top: 95%;
         right: auto;
         left: 31%;
       }
 
       .image-2 {
-        height: 241px;
+        height: 39vh;
         bottom: 104%;
         top: auto;
         left: auto;
-        right: 19%;
+        right: 10%;
       }
 
       .element-2 {
@@ -163,12 +163,18 @@
           label {
             font-size: 13px;
             line-height: 24px;
+            font-family: $font-third;
           }
           input {
             width: 98%;
-            height: 52px;
-            padding-left: 22px;
-            margin-bottom: 60px;
+            height: 40px;
+            padding-left: 15px;
+            margin-bottom: 15px;
+          }
+
+          button {
+            margin-top: 15px;
+            width: 60%;
           }
         }
       }
