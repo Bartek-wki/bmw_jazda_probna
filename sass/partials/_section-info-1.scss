@@ -55,17 +55,15 @@
     }
   }
 }
+
 @media (max-width: 576px) {
   #info-1 {
-    margin-top: 8.33vh;
-
     .facts-wrapper {
       .article-wrapper {
-        width: 100%;
         article {
           width: 100%;
           margin-right: 0;
-          margin-bottom: 30px;
+          justify-content: space-between;
         }
       }
     }
@@ -74,8 +72,9 @@
 
 @media (max-width: 1200px) {
   #info-1 {
-    flex-wrap: wrap;
+    margin-top: 8.33vh;
     justify-content: center;
+    flex-wrap: wrap;
 
     .images-wrapper {
       margin-bottom: 8.33vh;
@@ -90,7 +89,14 @@
       width: 90%;
       max-width: 90%;
       margin: 0;
-      justify-content: space-between;
+
+      .article-wrapper {
+        width: 100%;
+        justify-content: space-between;
+        article {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }

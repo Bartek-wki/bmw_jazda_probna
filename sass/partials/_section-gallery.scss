@@ -24,3 +24,14 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #gallery {
+    flex-direction: column;
+    margin-top: 16.67vh;
+
+    .left-wrapper {
+      margin: 0;
+    }
+  }
+}

@@ -53,22 +53,10 @@
 
 @media (max-width: 576px) {
   #info-2 {
-    flex-direction: column-reverse;
     align-items: center;
 
     .description-wrapper {
       margin: 0;
-      width: 90%;
-    }
-
-    .images-wrapper {
-      width: 100%;
-      justify-content: space-around;
-      margin-bottom: 8.33vh;
-
-      .img-2-wrapper {
-        margin: 0 0 0 10px;
-      }
     }
   }
 }
