@@ -33,6 +33,13 @@ a:visited {
   text-decoration: none;
 }
 
+a:hover,
+li:hover {
+  color: $color-bmw-blue;
+  transition: $transition;
+  transform: scale(1.1, 1.1);
+}
+
 a {
   color: $color-bright;
 }

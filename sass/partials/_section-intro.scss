@@ -29,6 +29,10 @@
       &:nth-child(2) {
         margin-left: 14.5vw;
       }
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
     }
 
     input:checked + label {
@@ -101,6 +105,11 @@
     justify-content: center;
     text-transform: uppercase;
     z-index: 300;
+
+    &:hover {
+      color: $color-bright;
+      
+    }
   }
 
   .intro-title {
@@ -224,6 +233,27 @@
       .slider3 {
         background-image: url("../images/slider3@2x.png");
       }
+    }
+  }
+}
+
+@media (min-height: 960px) {
+  #intro {
+    .slider-container {
+      label {
+        margin-top: 768px;
+      }
+    }
+    a {
+      top: 739px;
+    }
+  }
+}
+
+@media (min-height: 960px) and (max-width: 1200px) {
+  #intro {
+    a {
+      top: 700px;
     }
   }
 }
