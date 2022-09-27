@@ -8,6 +8,15 @@
     max-width: 100%;
     height: auto;
     padding: 5px;
+
+    &:first-child:hover {
+      transform: scale(1.01);
+    }
+
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.5s;
+    }
   }
 
   .left-wrapper {
@@ -21,6 +30,17 @@
 
     .row {
       display: flex;
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  #gallery {
+    flex-direction: column;
+    margin-top: 16.67vh;
+
+    .left-wrapper {
+      margin: 0;
     }
   }
 }

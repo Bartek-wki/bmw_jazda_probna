@@ -1,6 +1,8 @@
 header {
   position: absolute;
-  margin: 20px 14.5vw 0 14.5vw;
+  max-width: 1364px;
+  width: 90%;
+  margin: 20px auto;
   left: 0;
   right: 0;
   display: flex;
@@ -10,7 +12,11 @@ header {
   nav {
     margin-top: 10px;
 
-    ul {
+    .mobile-navigation {
+      display: none;
+    }
+
+    .desktop-navigation {
       display: flex;
       font-size: 18px;
       font-weight: 700;
@@ -24,6 +30,7 @@ header {
 
   h1 {
     margin: 0;
+    z-index: 100;
   }
 
   p {
@@ -47,6 +54,153 @@ header {
 
     span {
       font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 839px) {
+  header {
+    h1 {
+      height: 40px;
+      img {
+        height: 100%;
+      }
+    }
+    nav {
+      .desktop-navigation {
+        display: none;
+      }
+      .mobile-navigation {
+        display: block;
+        height: 100vh;
+
+        label {
+          .menu {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border-radius: 50% 50% 50% 50%;
+            -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+            box-shadow: 0 0 0 0 $color-black, 0 0 0 0 $color-black;
+            cursor: pointer;
+          }
+          .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 30px;
+            height: 2px;
+            background: $color-bright;
+            display: block;
+            -webkit-transform-origin: center;
+            transform-origin: center;
+            -webkit-transition: 0.5s ease-in-out;
+            transition: 0.5s ease-in-out;
+
+            &::after,
+            &::before {
+              -webkit-transition: 0.1s ease-in-out;
+              transition: 0.1s ease-in-out;
+              content: "";
+              position: absolute;
+              display: block;
+              width: 100%;
+              height: 100%;
+              background: $color-bright;
+            }
+
+            &::before {
+              top: -10px;
+            }
+            &::after {
+              bottom: -10px;
+            }
+          }
+
+          input {
+            display: none;
+          }
+
+          input:checked + .menu {
+            box-shadow: 0 0 0 100vw $color-black, 0 0 0 calc(100vh - 60px) $color-black;
+            border-radius: 0;
+            background-color: $color-black;
+            right: 0;
+            left: auto;
+            top: 60px;
+          }
+
+          input:checked + .menu .hamburger {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: $color-semi-dark;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+
+            &::after {
+              -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+              bottom: 0;
+              background-color: $color-semi-dark;
+            }
+
+            &::before {
+              -webkit-transform: rotate(90deg);
+              transform: rotate(90deg);
+              top: 0;
+            }
+          }
+
+          input:checked + .menu + ul {
+            opacity: 1;
+          }
+
+          ul {
+            z-index: 200;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            -webkit-transition: 0.25s 0s ease-in-out;
+            transition: 0.25s 0s ease-in-out;
+            width: 100%;
+
+            li {
+              text-align: center;
+              padding-bottom: 30px;
+              margin-bottom: 30px;
+
+              &:not(:last-child) {
+                border-bottom: 1px solid $color-menu-border;
+              }
+              a {
+                font-family: $font-first;
+                font-size: 16px;
+                line-height: 20px;
+                font-weight: 600;
+                color: $color-bright;
+                display: block;
+                text-transform: uppercase;
+
+                span {
+                  text-transform: lowercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    p {
+      display: none;
     }
   }
 }

@@ -73,7 +73,7 @@
           input {
             width: 22px;
             height: 22px;
-            margin-right: 10px;
+            margin: 0 10px 0 0;
           }
         }
 
@@ -97,6 +97,133 @@
           font-family: $font-first;
           font-weight: 600;
           border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .overlay {
+    background-color: $color-black-op-90;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: $color-bright;
+    font-family: $font-first;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 900;
+    display: none;
+
+    p:first-child {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    p:nth-child(2) {
+      font-family: $font-third;
+      font-size: 13px;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 0 60px 0;
+    }
+
+    #close-overlay {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      line-height: 26px;
+      padding: 10px 60px;
+      background-color: $color-bmw-blue;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  .active {
+    display: flex;
+  }
+}
+
+@media (max-width: 839px) {
+  #form {
+    margin-top: 46.8vh;
+    margin-bottom: 53vh;
+
+    .box {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      width: 90%;
+
+      .element-1,
+      .element-3 {
+        display: none;
+      }
+
+      .image-1 {
+        height: 48vh;
+        top: 95%;
+        right: auto;
+        left: 31%;
+      }
+
+      .image-2 {
+        height: 39vh;
+        bottom: 104%;
+        top: auto;
+        left: auto;
+        right: 10%;
+      }
+
+      .element-2 {
+        height: 275.65px;
+        bottom: 84%;
+        top: auto;
+        right: 66%;
+        left: auto;
+      }
+
+      .element-4 {
+        left: 16%;
+        right: auto;
+        top: 75.75%;
+        bottom: auto;
+      }
+
+      .form-wrapper {
+        background: none;
+        padding: 0;
+        box-shadow: none;
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        form {
+          label {
+            font-size: 13px;
+            line-height: 24px;
+            font-family: $font-third;
+          }
+          input {
+            width: 98%;
+            height: 40px;
+            padding-left: 15px;
+            margin-bottom: 15px;
+          }
+
+          button {
+            margin-top: 15px;
+            width: 60%;
+          }
         }
       }
     }

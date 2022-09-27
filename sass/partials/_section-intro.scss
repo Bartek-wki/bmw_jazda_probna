@@ -29,6 +29,10 @@
       &:nth-child(2) {
         margin-left: 14.5vw;
       }
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
     }
 
     input:checked + label {
@@ -100,13 +104,23 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    z-index: 300;
+
+    &:hover {
+      color: $color-bright;
+      
+    }
   }
 
   .intro-title {
     text-transform: uppercase;
     position: absolute;
-    left: calc(15.8vw - 25px);
     top: 35vh;
+    width: 90%;
+    max-width: 1364px;
+    margin: auto;
+    left: 0;
+    right: 0;
 
     p span {
       text-transform: lowercase;
@@ -131,7 +145,7 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 414px) {
   #intro {
     .slider-container {
       .slider1 {
@@ -144,6 +158,25 @@
 
       .slider3 {
         background-image: url("../images/slider1_small.png");
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 414px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  #intro {
+    .slider-container {
+      .slider1 {
+        background-image: url("../images/slider1_small@2x.png");
+      }
+
+      .slider2 {
+        background-image: url("../images/slider1_small@2x.png");
+      }
+
+      .slider3 {
+        background-image: url("../images/slider1_small@2x.png");
       }
     }
   }
@@ -181,6 +214,46 @@
           margin-left: 0;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 415px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+  #intro {
+    .slider-container {
+      .slider1 {
+        background-image: url("../images/slider1@2x.png");
+      }
+
+      .slider2 {
+        background-image: url("../images/slider2@2x.png");
+      }
+
+      .slider3 {
+        background-image: url("../images/slider3@2x.png");
+      }
+    }
+  }
+}
+
+@media (min-height: 960px) {
+  #intro {
+    .slider-container {
+      label {
+        margin-top: 768px;
+      }
+    }
+    a {
+      top: 739px;
+    }
+  }
+}
+
+@media (min-height: 960px) and (max-width: 1200px) {
+  #intro {
+    a {
+      top: 700px;
     }
   }
 }
